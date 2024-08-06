@@ -75,11 +75,13 @@ img {
   font-family: 'Bebas Neue', cursive;
   font-size: 78px;
   margin: 0;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
 }
 
 .home1 h6 {
   font-size: 28px;
   margin-top: 10px;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
 }
 
 .home2 a {
@@ -129,7 +131,7 @@ img {
 }
 
 .main2{
-  background-image: url("remake-images/bg_image2.jpg");
+  background-image: url("remake-images/bg_image.jpg");
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
@@ -147,7 +149,6 @@ img {
   flex: 1;
   text-align: center;
   margin: 0 20px;
-  border: solid red;
   border-radius: 1cap;
   background-color: #070d1e85;
 }
@@ -158,7 +159,6 @@ img {
   margin-top: 20px;
   height: 300px;
   width: 250px;
-  border: solid black;
 }
 
 .gym-trainer p {

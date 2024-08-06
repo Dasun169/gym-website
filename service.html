@@ -18,8 +18,12 @@
   <link rel="stylesheet" href="style.css">
 
   <style type="text/css">
+    .main {
+      background-image: url("remake-images/bg_image_blur.jpg");
+    }
+
     .next{
-      background-image: url(remake-images/bg_image.jpg);
+      background-image: url("remake-images/bg_image_blur.jpg");
       background-position: center;
       background-size: cover;
       background-repeat: no-repeat;
@@ -31,6 +35,8 @@
       display: flex;
       justify-content: center;
       align-items: center;
+      width: 90%;
+      margin: auto;
     }
 
     .service1 img{
@@ -43,14 +49,17 @@
       text-align: center;
       color: white;
       text-shadow: 1px 1px 2px black, 0 0 25px blue, 0 0 5px darkblue;
-      padding-right: 70px;
+      padding-right: 50px;
       line-height: 250%;
+      padding-left: 50px;
     }
 
     .service2{
       display: flex;
       justify-content: center;
       align-items: center;
+      width: 90%;
+      margin: auto;
     }
 
     .service2 img{
@@ -63,8 +72,24 @@
       text-align: center;
       color: white;
       text-shadow: 1px 1px 2px black, 0 0 25px blue, 0 0 5px darkblue;
-      padding-left: 70px;
+      padding-left: 50px;
       line-height: 250%;
+      padding-right: 50px;
+    }
+
+    .hidden {
+      opacity: 0;
+    }
+
+    .fade-in {
+      animation: fadeIn 2s forwards;
+    }
+
+    @keyframes fadeIn {
+      to {
+        opacity: 1;
+        transform: scale(1.05);
+      }
     }
   </style>
 </head>
@@ -84,7 +109,7 @@
     </div>
 
     <div>
-      <div class="service1">
+      <div class="service1 hidden">
         <div><img src="remake-images/service1.png" alt=""></div>
         <div class="service1-body">
           <h1>Personal Training</h1>
@@ -99,7 +124,7 @@
         </div>
       </div>
 
-      <div class="service2">
+      <div class="service2 hidden">
         <div class="service2-body">
           <h1>Group Fitness Classes</h1>
           <p>Engaging classes led by experienced instructors, 
@@ -119,7 +144,7 @@
   </div>
 
   <div class="next">
-    <div class="service1">
+    <div class="service1 hidden">
       <div><img src="remake-images/service3.png" alt=""></div>
       <div class="service1-body">
         <h1>Wellness and Recovery Services</h1>
@@ -135,7 +160,7 @@
       </div>
     </div>
 
-    <div class="service2">
+    <div class="service2 hidden">
       <div class="service2-body">
         <h1>Spa and Relaxation Services</h1>
         <p>A range of spa treatments designed to promote relaxation 

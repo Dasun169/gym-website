@@ -14,7 +14,7 @@
   <link rel="stylesheet" href="style.css">
   <style type="text/css">
     body{
-      background-image: url('images/login_bg.jpg');
+      background-image: url("remake-images/bg_image.jpg");
       background-position: center;
       background-size: cover;
       background-repeat: no-repeat;
@@ -32,15 +32,17 @@
       width: 40%;
       margin-left: auto;
       margin-right: auto;
-      background-color: aliceblue;
-      opacity: 0.8;
+      background-color: rgb(55, 48, 48,0.8);
       border-radius: 1cap;
     }
 
-    .enter-email h2{
-      font-family: "Roboto", sans-serif;
+    .enter-email h1{
+      font-family: 'Oswald', sans-serif;
       text-align: center;
       margin-bottom: 10px;
+      color: white;
+      padding-top: 10px;
+      padding-bottom: 20px;
     }
 
     .email-center{
@@ -55,16 +57,22 @@
 
     .email-center input{
       width: 500px;
+      height: 30px;
+      border-radius: 1cap;
+      background-color: #0F0F0F;
+      color: white;
     }
 
     .btn1{
       text-align: center;
-      margin-top: 15px;
+      margin-top: 35px;
+      margin-bottom: 20px;
     }
 
     .btn2 {
       text-align: center;
-      margin-bottom: 15px;
+      margin-bottom: 35px;
+      margin-top: 20px;
     }
 
     .btn1 button, .btn2 button {
@@ -79,6 +87,21 @@
     .btn1 button:hover, .btn2 button:hover {
       background-color: #ff4500;
     }
+
+    .error-msg{
+      color: red;
+      font-size: 12px;
+      padding-left: 32px;
+      margin-top: 0;
+    }
+
+    .icon{
+      font-size: 20px;
+      position: relative;
+      top: 4px;
+      padding-right: 5px;
+    }
+
   </style>
   <script type="text/javascript">
     
@@ -101,27 +124,25 @@
 
   <div class="login">
     <div class="enter-email">
-      <h2>Member Login</h2>
+      <h1>Member Login</h1>
       <div class="email-center">
-        <i class='bx bxs-user'></i>
+        <i class='bx bxs-user icon'></i>
         <input type="text" placeholder="User Name" required><br><br>
       
-        <i class='bx bxs-lock' ></i>
+        <i class='bx bxs-lock icon' ></i>
         <input type="password" placeholder="password" required>
+        <p class="error-msg"></p>
         <div class="btn1">
           <button id="btn-login">Login</button>
         </div>
-        <p class="error1"></p>
+
         <hr>
         <div class="btn2">
           <button id="btn-register" onclick="window.location.href='register.html'">Register</button>
         </div>
       </div>
     </div>
-
-    <div class="contact-us">
-
-    </div>
+    
   </div>
 
   <div class="footer">

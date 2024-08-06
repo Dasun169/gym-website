@@ -59,7 +59,11 @@
     }
 
     .input-box input{
-      width: 90%;
+      width: 85%;
+      height: 30px;
+      border-radius: 1cap;
+      background-color: #0F0F0F;
+      color: white;
     }
 
     .btn{
@@ -84,6 +88,25 @@
     .btn button:hover {
       background-color: #ff4500;
     }
+
+    .icon{
+      font-size: 20px;
+      position: relative;
+      top: 5px;
+      padding-right: 5px;
+    }
+
+    .error-msg{
+      color: red;
+      font-size: 12px;
+      padding-left: 32px;
+      margin-top: 0;
+    }
+
+    #text-size{
+      font-size: 14px;
+      padding-right: 30px;
+    }
   </style>
 
 </head>
@@ -101,40 +124,50 @@
           <a href="login.html" class="nav_item">Login</a>
       </div>
     </div>
+
     <div class="login">
       <div class="wrapper">
-        <form action="">
+        <form action="" id="registration-form">
           <h1>Registration</h1>
 
           <div class="input-box">
-              <i class='bx bxs-user'></i>
-              <input type="text" placeholder="Full Name" required><br><br>
+              <i class="bx bxs-user icon"></i>
+              <input type="text" placeholder="Full Name" required>
+              <br><br>
 
-              <i class='bx bxs-user'></i>
-              <input type="text" placeholder="User Name" required><br><br>
+              <i class="bx bxs-user icon"></i>
+              <input type="text" placeholder="User Name" required>
+              <br><br>
 
-              <i class='bx bxs-envelope' ></i>
-              <input type="email" placeholder="Email" required><br><br>
+              <i class="bx bxs-envelope icon" ></i>
+              <input type="email" id="email" placeholder="Email" required>
+              <br><br>
 
-              <i class='bx bxs-phone' ></i>
-              <input type="number" placeholder="Phone Number" required><br><br>
+              <i class="bx bxs-phone icon" ></i>
+              <input type="number" id="phone-number" placeholder="Phone Number" required>
+              <br><br>
 
-              <i class='bx bxs-lock' ></i>
-              <input type="password" placeholder="password" required><br><br>
+              <i class="bx bxs-lock icon" ></i>
+              <input type="password" id="password" placeholder="password" required>
+              <br><br>
 
-              <i class='bx bxs-lock' ></i>
-              <input type="password" placeholder="Confirm Password" required><br><br><br>
+              <i class="bx bxs-lock icon" ></i>
+              <input type="password" id="confirm-password" placeholder="Confirm Password" required>
+              <br><br>
           </div>
 
           <label>
-            <input type="checkbox">I hereby declare that the above information provided is true and correct.
-          </label><br><br>
+            <input type="checkbox" id="term"><span id="text-size">I hereby declare that the above information provided is true and correct.</span>
+          </label>
+          <p class="error-msg" id="terms-error"></p>
+          <br>
           <div class="btn">
             <button type="submit">Register</button>
           </div>
         </form>
       </div>
     </div>
+
     <div class="footer">
       <div class="footer_left">
         <h2>Quick Menu</h2>
@@ -151,5 +184,10 @@
       </div>
     </div>
   </div>
+
+  <script type="text/javascript">
+    
+  </script>
+
 </body>
 </html>
