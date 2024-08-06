@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Login</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Rubik:ital,wght@0,300..900;1,300..900&display=swap" rel="stylesheet">
+  <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+  <link rel="stylesheet" href="style.css">
+  <style type="text/css">
+    body{
+      background-image: url('images/login_bg.jpg');
+      background-position: center;
+      background-size: cover;
+      background-repeat: no-repeat;
+      height: 140vh;
+    }
+
+    .login{
+      height: 650px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .enter-email{
+      width: 40%;
+      margin-left: auto;
+      margin-right: auto;
+      background-color: aliceblue;
+      opacity: 0.8;
+      border-radius: 1cap;
+    }
+
+    .enter-email h2{
+      font-family: "Roboto", sans-serif;
+      text-align: center;
+      margin-bottom: 10px;
+    }
+
+    .email-center{
+      padding-left: 20px ;
+      padding-right: 20px;
+      padding-bottom: 0;
+    }
+
+    .email-center p{
+      padding-left: 20px;
+    }
+
+    .email-center input{
+      width: 500px;
+    }
+
+    .btn1{
+      text-align: center;
+      margin-top: 15px;
+    }
+
+    .btn2 {
+      text-align: center;
+      margin-bottom: 15px;
+    }
+
+    .btn1 button, .btn2 button {
+      background-color: #ff6347;
+      color: white;
+      padding: 10px 20px;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+
+    .btn1 button:hover, .btn2 button:hover {
+      background-color: #ff4500;
+    }
+  </style>
+  <script type="text/javascript">
+    
+  </script>
+</head>
+<body>
+  <div class="header">
+    <div class="logo1">
+      <img src="remake-images/logo.jpg" class="logo_img" alt="logo">
+    </div>
+
+    <div class="nav_bar">
+      <a href="home.html" class="nav_item">Home</a>
+      <a href="service.html" class="nav_item">Services</a>
+      <a href="packages.html" class="nav_item">Packages</a>
+      <a href="contact-us.html" class="nav_item">Contact Us</a>
+      <a href="login.html" class="nav_item">Login</a>
+    </div>
+  </div>
+
+  <div class="login">
+    <div class="enter-email">
+      <h2>Member Login</h2>
+      <div class="email-center">
+        <i class='bx bxs-user'></i>
+        <input type="text" placeholder="User Name" required><br><br>
+      
+        <i class='bx bxs-lock' ></i>
+        <input type="password" placeholder="password" required>
+        <div class="btn1">
+          <button id="btn-login">Login</button>
+        </div>
+        <p class="error1"></p>
+        <hr>
+        <div class="btn2">
+          <button id="btn-register" onclick="window.location.href='register.html'">Register</button>
+        </div>
+      </div>
+    </div>
+
+    <div class="contact-us">
+
+    </div>
+  </div>
+
+  <div class="footer">
+    <div class="footer_left">
+      <h2>Quick Menu</h2>
+      <br>
+      <a href="home.html" class="footer_item">Home</a> <br>
+      <a href="service.html" class="footer_item">Services</a> <br>
+      <a href="packages.html" class="footer_item">Packages</a> <br>
+      <a href="contact-us.html" class="footer_item">Contact Us</a> <br>
+      <a href="login.html" class="footer_item">Login</a> <br><br><br>
+      <p>©All Rights Reserved, Group Project</p>
+    </div>
+    <div class="footer_right">
+      <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3919.452933790516!2d79.1252202745172!3d10.776580059191955!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3baab8bcb7702799%3A0xee57747a80563c74!2sFitzone%20gym!5e0!3m2!1sen!2slk!4v1722140129560!5m2!1sen!2slk" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+    </div>
+  </div>
+
+</body>
+</html>

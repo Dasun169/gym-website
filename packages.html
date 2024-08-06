@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Packages</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Rubik:ital,wght@0,300..900;1,300..900&display=swap" rel="stylesheet">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Oswald:wght@200..700&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Rubik:ital,wght@0,300..900;1,300..900&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="style.css">
+
+  <style type="text/css">
+    .main{
+      height: 150vh;
+    }
+    .package-main2{
+      display: flex;
+      justify-content: space-between;
+      margin-left: 100px;
+      margin-right: 100px;
+    }
+
+    .membership{
+      border: solid red;
+      border-radius: 1cap;
+      text-align: justify;
+      width: 350px;
+      margin-top: 20px;
+      background-color: cadetblue;
+      padding-top: 25px;
+      transition: transform 1s;
+    }
+
+    .membership:hover{
+      transform: scale(1.05);
+    }
+    
+    .membership p{
+      color: white;
+      line-height: 20px;
+      padding-left: 30px;
+      padding-right: 30px;
+      font-family: "Lora", serif;
+    }
+
+    .membership h1{
+      text-align: center;
+      background-color: blanchedalmond;
+      text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+      font-family: "Oswald", sans-serif;
+    }
+
+    .silver{
+      background: linear-gradient(to right, #c0c0c0, #888282);
+    }
+
+    .silver h1{
+      width: 120px;
+      border-radius: 1cap;
+      margin: auto;
+    }
+
+    .gold{
+      background: linear-gradient(to right, #938430, #ffeb3b);
+    }
+
+    .gold h1{
+      width: 100px;
+      border-radius: 1cap;
+      margin: auto;
+    }
+
+    .platinum{
+      background: linear-gradient(to right, #888379, #bfbfbf);
+    }
+
+    .platinum h1{
+      width: 180px;
+      border-radius: 1cap;
+      margin: auto;
+    }
+
+    .footer{
+      margin-top: 45px;
+    }
+
+    .btn{
+      text-align: center;
+      margin-bottom: 20px;
+    }
+
+    .btn button {
+      background-color: #ff6347;
+      color: white;
+      padding: 10px 20px;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+      align-items: center;
+      font-size: 18px;
+    }
+
+    .btn button:hover {
+      background-color: #ff4500;
+    }
+
+  </style>
+  
+</head>
+<body>
+  <div class="main">
+
+    <div class="header">
+      <div class="logo1">
+        <img src="images/logo.jpg" class="logo_img" alt="logo">
+      </div>
+      <div class="nav_bar">
+          <a href="home.html" class="nav_item">Home</a>
+          <a href="service.html" class="nav_item">Services</a>
+          <a href="packages.html" class="nav_item">Packages</a>
+          <a href="contact-us.html" class="nav_item">Contact Us</a>
+          <a href="login.html" class="nav_item">Login</a>
+      </div>
+    </div>
+
+    <div class="package-main1">
+      <div class="package-main2">
+        <div class="silver membership">
+          <h1>SILVER</h1>
+          <p>1. Access to all basic gym equipment</p>
+          <p>2. Standard locker room access</p>
+          <p>3. Free group fitness classes (e.g: yoga, aerobics)</p>
+          <p>4. One free personal training session per month</p>
+          <p>5. 10% discount on gym merchandise</p>
+          <p>6. Access to the gym during off-peak hours</p>
+          <p>7. Free nutritional guidance resources</p>
+
+          <div class="btn">
+            <button type="submit">Subscribe</button>
+          </div>
+
+        </div>
+
+        <div class="gold membership">
+          <h1>GOLD</h1>
+          <p>1. All Silver Membership benefits</p>
+          <p>2. Unlimited access to all gym facilities, including swimming pool and sauna</p>
+          <p>3. Enhanced locker room access with complimentary towel service</p>
+          <p>4. Two free personal training sessions per month</p>
+          <p>5. Priority booking for fitness classes</p>
+          <p>6. 15% discount on gym merchandise</p>
+          <p>7. Access to exclusive member events and workshops</p>
+          <p>8. Free guest passes (one per month)</p>
+          <p>9. Extended gym access hours</p>
+
+          <div class="btn">
+            <button type="submit">Subscribe</button>
+          </div>
+
+        </div>
+
+        <div class="platinum membership">
+          <h1>PLATINUM</h1>
+          <p>1. All Gold Membership benefits</p>
+          <p>2. VIP locker room access with personal locker</p>
+          <p>3. Unlimited personal training sessions</p>
+          <p>4. Free access to premium fitness classes (e.g., pilates, spinning)</p>
+          <p>5. 20% discount on gym merchandise and cafe</p>
+          <p>6. Complimentary health and wellness assessments (monthly)</p>
+          <p>7. Free spa treatments (one per month)</p>
+          <p>8. Complimentary nutritionist consultations</p>
+          <p>9. Priority customer service and support</p>
+          <p>10. Unlimited guest passes</p>
+          <p>11. 24/7 gym access</p>
+
+          <div class="btn">
+            <button type="submit">Subscribe</button>
+          </div>
+
+        </div>
+      </div>
+    </div>
+
+    <div class="footer">
+      <div class="footer_left">
+        <h2>Quick Menu</h2>
+        <br>
+        <a href="home.html" class="footer_item">Home</a> <br>
+        <a href="service.html" class="footer_item">Services</a> <br>
+        <a href="packages.html" class="footer_item">Packages</a> <br>
+        <a href="contact-us.html" class="footer_item">Contact Us</a> <br>
+        <a href="login.html" class="footer_item">Login</a> <br><br><br>
+        <p>©All Rights Reserved, Group Project</p>
+      </div>
+      <div class="footer_right">
+        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3919.452933790516!2d79.1252202745172!3d10.776580059191955!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3baab8bcb7702799%3A0xee57747a80563c74!2sFitzone%20gym!5e0!3m2!1sen!2slk!4v1722140129560!5m2!1sen!2slk" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+      </div>
+    </div>
+
+  </div>
+</body>
+</html>
