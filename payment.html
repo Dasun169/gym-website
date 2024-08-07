@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Contact Us</title>
+  <title>Payment</title>
 
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -11,10 +11,9 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Rubik:ital,wght@0,300..900;1,300..900&display=swap" rel="stylesheet">
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Oswald:wght@200..700&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Rubik:ital,wght@0,300..900;1,300..900&display=swap" rel="stylesheet">
-
+  <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  
   <link rel="stylesheet" href="style.css">
 
   <style type="text/css">
@@ -28,58 +27,53 @@
       margin-top: -10px;
     }
 
-    .contact-us-body{
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      width: 70%;
+    .payment-body{
+      width: 40%;
       margin: auto;
-      padding-top: 35px;
-      padding-bottom: 35px;
-    }
-
-    .contact-text{
-      text-align: left;
-      margin-right: 50px;
-      margin-bottom: 30px;
-    }
-
-    .contact-text h1{
+      background-color: rgba(0, 0, 0, 0.6);
+      border-radius: 2cap;
       color: white;
-      font-size: 45px;
+      margin-top: 50px;
+      margin-bottom: 50px;
     }
 
-    #color-us{
-      color: red;
-    }
-
-    .contact-text p{
-      font-family: "Gupter", serif;
+    .payment-body h1{
       color: white;
+      text-align: center;
+      padding-top: 30px;
+    }
+
+    .payment-types{
+      display: flex;
+      justify-content: space-around;
+      align-items: center;
+      margin-bottom: 20px;
+    }
+
+    .type{
+      padding-left: 30px;
       font-size: 14px;
-      margin-top: -10px;
     }
 
-    .contact-text input{
-      width: 100%;
+    .payment-table{
+      width: 90%;
+      margin: auto;
+      margin-top: 20px;
+      font-size: 15px;
+    }
+    
+    .payment-table input{
+      width: 98%;
       height: 30px;
       border-radius: 1cap;
       background-color: #0F0F0F;
       color: white;
     }
 
-    #message{
-      height: 150px !important;
-      width: 100%;
-      height: 30px;
-      border-radius: 1cap;
-      background-color: #0F0F0F;
-      color: white;
-    }
-
-    .contact-img img{
-      height: 570px;
-      width: 750px;
+    .submit{
+      text-align: center;
+      margin-top: 15px;
+      padding-bottom: 30px;
     }
 
     .btn button {
@@ -89,15 +83,19 @@
       border: none;
       border-radius: 5px;
       cursor: pointer;
+      width: 200px;
+      font-size: 16px;
     }
 
     .btn button:hover {
       background-color: #ff4500;
     }
+
   </style>
 </head>
 <body>
   <div class="main1">
+
     <div class="header">
       <div class="logo1">
         <a href="home.html"><img src="remake-images/logo.jpg" class="logo_img" alt="logo"></a>
@@ -110,24 +108,61 @@
       </div>
     </div>
 
-    <div class="contact-us-body">
-      <div class="contact-text">
-        <h1>CONTACT <span id="color-us">US</span></h1>
-        <p>Reach out to us via email at info@fitzone.com or call 
-          us at (123) 456-7890 for any inquiries or support.</p><br>
+    <div class="payment">
+      <div class="payment-body">
 
-          <input type="text" placeholder="User Name"><br><br>
-          <input type="email" placeholder="Email"><br><br>
-          <input type="text" placeholder="Write a Subject"><br><br>
-          <textarea name="" id="message"></textarea><br><br>
+        <h1>CONFIRM <span style="color: red;"> YOUR </span> PAYMENT</h1>
 
+        <div class="payment-types">
+          <div class="visa"> <i class="fa fa-cc-visa" style="font-size:48px;color:red"></i> </div>
+          <div class="master-card"> <i class="fa fa-cc-mastercard" style="font-size:48px;color:red"></i> </div>
+          <div class="paypal"> <i class="fa fa-cc-paypal" style="font-size:48px;color:red"></i> </div>
+        </div>
+
+        <div class="type"><input type="radio" value="private" name="type">Private
+          <input type="radio" value="business" name="type">Business
+        </div>
+
+        <table class="payment-table">
+          <tr>
+            <td colspan="2">
+              Name  <br>
+              <input type="name" name="name" placeholder="John Doe"><br><br>
+            </td>
+          </tr>
+
+          <tr>
+            <td colspan="2">
+              Email  <br>
+              <input type="email" name="email" placeholder="johndoe@gmail.com"><br><br>
+            </td>
+          </tr>
+
+          <tr>
+            <td colspan="2">
+              Card Number  <br>
+              <input type="text" name="card" placeholder="0000 0000 0000 0000"><br><br>
+            </td>
+          </tr>
+
+          <tr>
+            <td>
+              Expiry Date <br>
+              <input type="text" name="expiry_date" placeholder="MM/YY"><br><br>
+            </td>
+            <td>
+              CVV <br>
+              <input type="text" name="cvv" placeholder="***"><br><br>
+            </td>
+          </tr>
+        </table>
+
+        <div class="submit">
           <div class="btn">
-            <button type="submit">Submit</button>
+            <button type="submit">Payment Submit</button>
           </div>
-      </div>
+        </div>
 
-      <div class="contact-img">
-        <img src="remake-images/contact-us.jpg" alt="">
       </div>
     </div>
 
@@ -145,6 +180,7 @@
         <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3919.452933790516!2d79.1252202745172!3d10.776580059191955!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3baab8bcb7702799%3A0xee57747a80563c74!2sFitzone%20gym!5e0!3m2!1sen!2slk!4v1722140129560!5m2!1sen!2slk" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
       </div>
     </div>
+
   </div>
 </body>
 </html>

@@ -96,11 +96,12 @@
       padding-right: 5px;
     }
 
-    .error-msg{
+    .error-message{
       color: red;
       font-size: 12px;
       padding-left: 32px;
       margin-top: 0;
+      visibility: hidden;
     }
 
     #text-size{
@@ -114,7 +115,7 @@
   <div class="main">
     <div class="header">
       <div class="logo1">
-        <img src="remake-images/logo.jpg" class="logo_img" alt="logo">
+        <a href="home.html"><img src="remake-images/logo.jpg" class="logo_img" alt="logo"></a>
       </div>
       <div class="nav_bar">
           <a href="home.html" class="nav_item">Home</a>
@@ -132,37 +133,37 @@
 
           <div class="input-box">
               <i class="bx bxs-user icon"></i>
-              <input type="text" placeholder="Full Name" required>
-              <br><br>
+              <input type="text" id="full-name" placeholder="Full Name" required>
+              <p class="error-message" id="full-name-valid">Invalid full name</p>
 
               <i class="bx bxs-user icon"></i>
               <input type="text" placeholder="User Name" required>
-              <br><br>
+              <p class="error-message">Invalid name</p>
 
               <i class="bx bxs-envelope icon" ></i>
               <input type="email" id="email" placeholder="Email" required>
-              <br><br>
+              <p class="error-message" id="email-valid">Invalid email</p>
 
               <i class="bx bxs-phone icon" ></i>
               <input type="number" id="phone-number" placeholder="Phone Number" required>
-              <br><br>
+              <p class="error-message" id="phone-number-valid">Phone number is required with 10 digits.</p>
 
               <i class="bx bxs-lock icon" ></i>
               <input type="password" id="password" placeholder="password" required>
-              <br><br>
+              <p class="error-message" id="password-valid">Use strong password</p>
 
               <i class="bx bxs-lock icon" ></i>
               <input type="password" id="confirm-password" placeholder="Confirm Password" required>
-              <br><br>
+              <p class="error-message" id="confirm-password-valid">Passwords do not match.</p>
           </div>
 
           <label>
             <input type="checkbox" id="term"><span id="text-size">I hereby declare that the above information provided is true and correct.</span>
+            <p class="error-message" id="term-valid">You must agree to the terms and conditions.</p>
           </label>
-          <p class="error-msg" id="terms-error"></p>
           <br>
           <div class="btn">
-            <button type="submit">Register</button>
+            <button type="submit" onclick="validation()">Register</button>
           </div>
         </form>
       </div>
@@ -186,7 +187,62 @@
   </div>
 
   <script type="text/javascript">
-    
+    function validation(){
+
+      const email = document.getElementById('email').value.trim();
+      const phone_number = document.getElementById('phone-number').value.trim();
+      const password = document.getElementById('password').value.trim();
+      const confirm_password = document.getElementById('confirm-password').value.trim();
+      const terms = document.getElementById('term').checked;
+
+      let valid = true;
+
+      const emailPattern = /^[^@\s]+@[^@\s]+\.[^@\s]+$/;
+      if (!emailPattern.test(email)) {
+        document.getElementById('email-valid').style.visibility = 'visible';
+        valid = false;
+      } else {
+        document.getElementById('email-valid').style.visibility = 'hidden';
+      }
+
+      const phonePattern = /^\d{10}$/; 
+      if (!phonePattern.test(phone_number)) {
+        document.getElementById('phone-number-valid').style.visibility = 'visible';
+        valid = false;
+      } else {
+        document.getElementById('phone-number-valid').style.visibility = 'hidden';
+      }
+
+      const passwordPattern = /^.{8,}$/;
+      if (!passwordPattern.test(password)) {
+        document.getElementById('password-valid').style.visibility = 'visible';
+        valid = false;
+      } else {
+        document.getElementById('password-valid').style.visibility = 'hidden';
+      }
+
+      if (confirm_password !== password) {
+        document.getElementById('confirm-password-valid').style.visibility = 'visible';
+        valid = false;
+      }
+      else {
+        document.getElementById('confirm-password-valid').style.visibility = 'hidden';
+      }
+
+      if (!terms) {
+        document.getElementById('term-valid').style.visibility = 'visible';
+        valid = false;
+      }
+      else {
+        document.getElementById('term-valid').style.visibility = 'hidden';
+      }
+
+      if (valid) {
+        alert('Form submitted successfully!');
+        document.getElementById('registration-form').submit();
+      }
+
+    }
   </script>
 
 </body>
