@@ -125,16 +125,18 @@
     <div class="enter-email">
       <h1>Member Login</h1>
       <div class="email-center">
-        <i class='bx bxs-user icon'></i>
-        <input type="text" placeholder="User Name" required><br><br>
-      
-        <i class='bx bxs-lock icon' ></i>
-        <input type="password" placeholder="password" required>
-        <p class="error-msg"></p>
-        <div class="btn1">
-          <button id="btn-login">Login</button>
-        </div>
+        <form action="login.php" method="post">
+          <i class='bx bxs-user icon'></i>
+          <input type="text" name="userName" placeholder="User Name" required><br><br>
 
+          <i class='bx bxs-lock icon'></i>
+          <input type="password" name="password" placeholder="Password" required>
+          <p class="error-msg"></p>
+          <div class="btn1">
+            <button type="submit">Login</button>
+          </div>
+        </form>
+        
         <hr>
         <div class="btn2">
           <button id="btn-register" onclick="window.location.href='register.html'">Register</button>

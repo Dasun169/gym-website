@@ -23,6 +23,10 @@
       height: 140vh;
     }
 
+    .main{
+      background-color: #0F0F0F;
+    }
+
     .login{
       height: 640px;
       display: flex;
@@ -128,32 +132,32 @@
 
     <div class="login">
       <div class="wrapper">
-        <form action="" id="registration-form">
+        <form action="register.php" method="post" id="registration-form" onsubmit="return validation()">
           <h1>Registration</h1>
 
           <div class="input-box">
               <i class="bx bxs-user icon"></i>
-              <input type="text" id="full-name" placeholder="Full Name" required>
+              <input type="text" id="full-name" placeholder="Full Name" name="fullName">
               <p class="error-message" id="full-name-valid">Invalid full name</p>
 
               <i class="bx bxs-user icon"></i>
-              <input type="text" placeholder="User Name" required>
+              <input type="text" placeholder="User Name" name="userName" required>
               <p class="error-message">Invalid name</p>
 
               <i class="bx bxs-envelope icon" ></i>
-              <input type="email" id="email" placeholder="Email" required>
+              <input type="email" id="email" placeholder="Email" name="email" required>
               <p class="error-message" id="email-valid">Invalid email</p>
 
               <i class="bx bxs-phone icon" ></i>
-              <input type="number" id="phone-number" placeholder="Phone Number" required>
+              <input type="number" id="phone-number" placeholder="Phone Number" name="phoneNumber" required>
               <p class="error-message" id="phone-number-valid">Phone number is required with 10 digits.</p>
 
               <i class="bx bxs-lock icon" ></i>
-              <input type="password" id="password" placeholder="password" required>
+              <input type="password" id="password" placeholder="password" name="password" required>
               <p class="error-message" id="password-valid">Use strong password</p>
 
               <i class="bx bxs-lock icon" ></i>
-              <input type="password" id="confirm-password" placeholder="Confirm Password" required>
+              <input type="password" id="confirm-password" placeholder="Confirm Password" name="confirmPassword" required>
               <p class="error-message" id="confirm-password-valid">Passwords do not match.</p>
           </div>
 
@@ -163,7 +167,7 @@
           </label>
           <br>
           <div class="btn">
-            <button type="submit" onclick="validation()">Register</button>
+            <button type="submit">Register</button>
           </div>
         </form>
       </div>
@@ -238,8 +242,9 @@
       }
 
       if (valid) {
-        alert('Form submitted successfully!');
-        document.getElementById('registration-form').submit();
+        return true; 
+      } else {
+        return false; 
       }
 
     }
