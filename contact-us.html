@@ -116,14 +116,17 @@
         <p>Reach out to us via email at info@fitzone.com or call 
           us at (123) 456-7890 for any inquiries or support.</p><br>
 
-          <input type="text" placeholder="User Name"><br><br>
-          <input type="email" placeholder="Email"><br><br>
-          <input type="text" placeholder="Write a Subject"><br><br>
-          <textarea name="" id="message"></textarea><br><br>
+          <form action="contact_us.php" method="post">
+            <input type="text" placeholder="User Name" name="username"><br><br>
+            <input type="email" placeholder="Email" name="email"><br><br>
+            <input type="text" placeholder="Write a Subject" name="subject"><br><br>
+            <textarea id="message" name="message"></textarea><br><br>
 
-          <div class="btn">
-            <button type="submit">Submit</button>
-          </div>
+            <div class="btn">
+              <button type="submit">Submit</button>
+            </div>
+          </form>
+
       </div>
 
       <div class="contact-img">
