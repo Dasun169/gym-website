@@ -27,9 +27,10 @@ $fullName = mysqli_real_escape_string($con, $_POST['fullName']);
 $userName = mysqli_real_escape_string($con, $_POST['userName']);
 $email = mysqli_real_escape_string($con, $_POST['email']);
 $phoneNumber = mysqli_real_escape_string($con, $_POST['phoneNumber']);
-$password = mysqli_real_escape_string($con, $_POST['password']);
-$confirmPassword = mysqli_real_escape_string($con, $_POST['confirmPassword']);
+$password = $_POST['password'];
+$confirmPassword = $_POST['confirmPassword'];
 
+$hashedPassword = password_hash($password, PASSWORD_DEFAULT);
 
 $sql_check_user = "SELECT * FROM user WHERE userName = '$userName'";
 $result = mysqli_query($con, $sql_check_user);
@@ -43,12 +44,12 @@ if (mysqli_num_rows($result) > 0) {
 }
 
 $sql2 = "INSERT INTO user (fullName, userName, email, phoneNumber, password)
-VALUES ('$fullName', '$userName', '$email', '$phoneNumber', '$password')";
+VALUES ('$fullName', '$userName', '$email', '$phoneNumber', '$hashedPassword')";
 
 if (mysqli_query($con, $sql2)) {
     echo "<script>
             alert('Registration successful!');
-            window.location.href = 'home.html';
+            window.location.href = 'login.html';
           </script>";
     exit(); 
 } else {

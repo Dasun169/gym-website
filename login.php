@@ -20,24 +20,27 @@ if ($result) {
         if (password_verify($password, $user['password'])) {
             echo "<script>
                     alert('Login successful!');
-                    window.location.href = 'home.html';
+                    window.location.href = 'packages.html';
                   </script>";
         } else {
             echo "<script>
                     alert('Invalid password!');
+                    window.history.back();
                   </script>";
         }
     } else {
         echo "<script>
                 alert('User not found!');
+                window.location.href = 'home.html';
               </script>";
     }
 } else {
     echo "<script>
             alert('Register your account first!');
+            window.location.href = 'register.html';
           </script>";
 }
 
-mysqli_close($con);
+mysqli_close($con1);
 
 ?>

@@ -193,6 +193,7 @@
   <script type="text/javascript">
     function validation(){
 
+      const fullName = document.getElementById('full-name').value.trim();
       const email = document.getElementById('email').value.trim();
       const phone_number = document.getElementById('phone-number').value.trim();
       const password = document.getElementById('password').value.trim();
@@ -200,6 +201,13 @@
       const terms = document.getElementById('term').checked;
 
       let valid = true;
+
+      if (!/^[a-zA-Z\s]+$/.test(fullName)) {
+        document.getElementById('full-name-valid').style.visibility = 'visible';
+        valid = false;
+      } else {
+        document.getElementById('full-name-valid').style.visibility = 'hidden';
+      }
 
       const emailPattern = /^[^@\s]+@[^@\s]+\.[^@\s]+$/;
       if (!emailPattern.test(email)) {
@@ -246,7 +254,6 @@
       } else {
         return false; 
       }
-
     }
   </script>
 
