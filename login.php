@@ -1,5 +1,7 @@
 <?php
 
+session_start();
+
 $con = mysqli_connect("localhost", "root", "");
 if (!$con) {
     die("Not connected to database: " . mysqli_error($con));
@@ -9,6 +11,8 @@ mysqli_select_db($con, "my_db");
 
 $userName = mysqli_real_escape_string($con, $_POST['userName']);
 $password = mysqli_real_escape_string($con, $_POST['password']);
+
+$_SESSION['userName'] = $userName;
 
 $sql = "SELECT * FROM user WHERE userName = '$userName'";
 $result = mysqli_query($con, $sql);

@@ -28,6 +28,7 @@ $sql_create_table = "CREATE TABLE IF NOT EXISTS payment(
   email VARCHAR(50),
   cardNo VARCHAR(16),
   expiryDate VARCHAR(5),
+  membership_type VARCHAR(20),
   PRIMARY KEY (cardNo)
 )";
 if (!mysqli_query($con, $sql_create_table)) {
@@ -38,6 +39,7 @@ if (!mysqli_query($con, $sql_create_table)) {
 $accType = mysqli_real_escape_string($con, $_POST['accType']);
 $cardNo = mysqli_real_escape_string($con, $_POST['cardNo']);
 $expiryDate = mysqli_real_escape_string($con, $_POST['expiryDate']);
+$membershipType = mysqli_real_escape_string($con, $_POST['membership_type']);
 
 // Split the expiry date into month and year
 list($expiryMonth, $expiryYear) = explode('/', $expiryDate);
@@ -65,8 +67,8 @@ if (!preg_match('/^[0-9]{12}$/', $cardNo)) {
 }
 
 // Insert the data into the payment table
-$sql_insert = "INSERT INTO payment (accType, userName, email, cardNo, expiryDate)
-               VALUES ('$accType', '$userName', '$email', '$cardNo', '$expiryDate')";
+$sql_insert = "INSERT INTO payment (accType, userName, email, cardNo, expiryDate, membership_type)
+               VALUES ('$accType', '$userName', '$email', '$cardNo', '$expiryDate','$membershipType')";
 
 if (mysqli_query($con, $sql_insert)) {
     echo "<script>
